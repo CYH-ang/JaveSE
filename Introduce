@@ -1,4 +1,4 @@
-public class introduce{
+public class Introduce{
 	public static void main(String[] args){
 		System.out.println("姓名：***");
 		System.out.println("年龄：男");
