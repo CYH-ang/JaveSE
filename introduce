@@ -1,0 +1,9 @@
+public class introduce{
+	public static void main(String[] args){
+		System.out.println("姓名：***");
+		System.out.println("年龄：男");
+		System.out.println("年龄："+25+"岁");
+		System.out.println("体重："+80+"KG");
+		System.out.println("爱好：打游戏");
+	}
+}
