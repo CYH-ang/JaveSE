@@ -1,4 +1,4 @@
-public class Dome01 {
+public class Number {
     public static void main(String[] args) {
         int number = 678;
         int ge = number % 10;
