@@ -1,0 +1,9 @@
+public class Height {
+    public static void main(String[] args) {
+        int daHS = 180;
+        int erHS = 210;
+        int saHS = 165;
+        int max = (daHS > erHS ? daHS : erHS) > saHS ? (daHS > erHS ? daHS : erHS) : saHS;
+        System.out.println("三个和尚中最高的身高为：" + max + "cm");
+    }
+}
