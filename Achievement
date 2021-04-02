@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Achievement {
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("请输入小王的成绩[0-100]");
+            int score = new Scanner(System.in).nextInt();
+            if (score >= 80 && score <= 100) {
+                System.out.println("奖励自行车一辆");
+                break;
+            } else if (score >= 60 && score <= 79) {
+                System.out.println("奖励王者荣耀皮肤一个");
+                break;
+            } else if (score >= 0 && score <= 59) {
+                System.out.println("头给你打歪");
+                break;
+            } else {
+                System.out.println("你的输入有误，请重新输入");
+            }
+        }
+    }
+}
