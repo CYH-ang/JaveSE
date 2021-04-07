@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Demo03 {
+    public static void main(String[] args) {
+        //创建对象
+        Scanner sc = new Scanner(System.in);
+        //提示
+        System.out.println("请输入一个你要查找的数");
+        //键盘录入想要查找的数
+        int num = sc.nextInt();
+        //创建一个动态数组
+        int[] arr = new int[]{5, 9, 8, 7, 6, 2, 3};
+        //定义一个索引
+        int indext = -1;
+        //遍历
+        for (int i = 0; i < arr.length; i++) {
+            //查询数组
+            if (num == arr[i]) {
+                indext = i;
+            }
+        }
+        //输出结果
+        if (indext == -1) {
+            System.out.println("没找到");
+        } else {
+            System.out.println("你想要查找的数的索引是：" + indext);
+        }
+    }
+}
