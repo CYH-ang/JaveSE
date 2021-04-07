@@ -1,0 +1,37 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomGame {
+    public static void main(String[] args) {
+        System.out.println("猜数游戏");
+        int i = new Random().nextInt(100) + 1;
+        System.out.println("请您输入一个[1-100]的数，输入0退出");
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int count = 1;
+
+        while (x != i) {
+            if (x > 100 || x < 0) {
+                System.out.println("你猜的数字有误，请重新输入，若想退出请输入0");
+            } else if(x==0){
+                break;
+            } else if (x > i) {
+                System.out.println("你输入的数字大了");
+            } else {
+                System.out.println("你输入的数字小了");
+            }
+            System.out.println("请你重新输入一个[1-100]的数，输入0退出");
+            x = sc.nextInt();
+            count++;
+        }
+
+        if (x == i & count > 5) {
+            System.out.println("你也太背了用了" + count + "次才答对");
+        } else if (x == i & count <= 5) {
+            System.out.println("你运气也太好了用" + count + "次就答对了");
+        } else {
+            System.out.println("程序正在退出.....");
+            System.out.println("真遗憾，下次再来挑战吧！！！");
+        }
+    }
+}
