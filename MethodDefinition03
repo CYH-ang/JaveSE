@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class MethodDefinition03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[5];
+        for (int i = 0; i < 5; i++) {
+            System.out.println("请输入第" + (i + 1) + "个分数");
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("最大值为" + getMax(arr));
+        System.out.println("最小值为" + getMin(arr));
+        System.out.println("平均值为" + getAvg(arr));
+    }
+
+    public static int getMax(int[] arr) {
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    public static int getMin(int[] arr) {
+        int min = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    public static int getAvg(int[] arr) {
+        int count = 0;
+        int avg = 0;
+        for (int i = 0; i < arr.length; i++) {
+            count += arr[i];
+        }
+        avg = count/arr.length;
+        return avg;
+    }
+}
