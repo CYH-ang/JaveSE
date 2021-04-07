@@ -1,0 +1,21 @@
+import java.util.Random;
+public class RandomArray {
+    public static void main(String[] args) {
+        //创建对象
+        Random ra = new Random();
+        //定义一个sum用于求和
+        int sum = 0;
+        //创建一个长度为10的数组
+        int[] arr = new int[10];
+        //遍历
+        for (int i = 0; i < arr.length; i++) {
+            //生成随机数
+            arr[i] = ra.nextInt(100) + 1;
+            //求和
+            sum += arr[i];
+        }
+        //输出平均值
+        System.out.println(sum);
+        System.out.println("这个数组的平均值为：" + sum / 10);
+    }
+}
