@@ -1,0 +1,12 @@
+public class While {
+    public static void main(String[] args) {
+        int ZF = 8848440;
+        double paper = 0.1;
+        int count = 0;
+        while (paper < ZF) {
+            paper *= 2;
+            count++;
+        }
+        System.out.println(count);
+    }
+}
